@@ -7,7 +7,6 @@ import java.util.logging.ErrorManager;
 public class App {
     public static void main(String[] args) {
 
-        /* Calculator 인스턴스 생성 */
         Scanner sc = new Scanner(System.in);
         int num1;
         int num2;

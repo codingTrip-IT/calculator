@@ -1,8 +1,8 @@
 package com.example.calculator2;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class Calculator {
+public class Calculator_old {
     /* 필드 영역 */
     int num1;
     int num2;
