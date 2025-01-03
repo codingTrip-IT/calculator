@@ -78,25 +78,18 @@ public class Calculator {
                     System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
                     break;
                 }
-//                try {
-//                    result = a / b;
-//                } catch (ArithmeticException e) {
-//                    System.err.println("0으로 나눌 수 없습니다. 그냥 0으로 처리할게" + e);
-//                    System.exit(0);
-//                    result = 0;
-//                }
                 result = num1 / num2;
                 break;
             default:
-                System.out.println("잘못된 연산자입니다. 다시 입력해주세요.");
+                System.out.println("사칙연산자가 아닙니다. 다시 입력해주세요.");
                 break;
         }
 
         System.out.println("결과: "+num1+operator+num2+"=" + result);
-        /* return 연산 결과 */
         list.add(result);
-        System.out.println("list"+list);
+        System.out.println("list 추가 후"+list);
         System.out.println(result);
+        /* return 연산 결과 */
         return result;
     }
 
