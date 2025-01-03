@@ -1,6 +1,6 @@
 package com.example.calculator2;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Calculator_old {
     /* 필드 영역 */

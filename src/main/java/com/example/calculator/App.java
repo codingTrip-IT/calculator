@@ -1,8 +1,6 @@
 package com.example.calculator;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.util.logging.ErrorManager;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
@@ -14,7 +12,6 @@ public class App {
         int result = 0;
         String exits;
 
-        try{
             while(true){
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 // Scanner를 사용하여 양의 정수를 입력받고 적합한 타입의 변수에 저장합니다.
@@ -62,14 +59,6 @@ public class App {
                     System.out.println("0이상 정수만 입력하세요.");
                 }
             }
-        } catch (InputMismatchException e){
-            e.printStackTrace();    //예외정보 출력
-//            ErrorManager log;
-//            log.error("InputMismatchException ERROR: {} ", e.getMassage()); //로그남김
-            throw e;  //예외 던지기
-        }
-
-
 
     }
 }
