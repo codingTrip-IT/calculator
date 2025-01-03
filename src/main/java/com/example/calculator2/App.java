@@ -10,6 +10,7 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
         String exits;
+        String removeOk;
 
             while(true){
                 System.out.print("첫 번째 숫자를 입력하세요:");
@@ -25,17 +26,24 @@ public class App {
                     cal.calculate(num1,num2,operator);
 
                     System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-                    /* exit을 입력 받으면 반복 종료 */
                     exits = sc.next();
                     if(exits.equals("exit")){
-                        cal.removeResult();
+                        System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? y/n");
+                        removeOk = sc.next();
+                        if(removeOk.equals("y")){
+                            cal.removeResult();
+                        }else if(removeOk.equals("n")){
+                            System.out.println("삭제하지 않고 종료합니다.");
+                        }else{
+                            System.out.println("삭제하지 않고 종료합니다.");
+                        }
                         break;
                     }
                 } else {
                     System.out.println("0이상 정수만 입력하세요.");
                 }
             }
-        cal.getList();
-        System.out.println(cal.getList());
+        cal.getResultList();
+        System.out.println(cal.getResultList());
     }
 }

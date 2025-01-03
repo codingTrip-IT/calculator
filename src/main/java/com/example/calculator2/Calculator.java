@@ -4,12 +4,11 @@ import java.util.*;
 
 public class Calculator {
     /* 필드 영역 */
-    int num1;
-    int num2;
-    char operator;
-    int result = 0;
-    //Queue<String> queue = new LinkedList<>();
-    ArrayList<Integer> list = new ArrayList<>();
+    private int num1;
+    private int num2;
+    private char operator;
+    private int result = 0;
+    private ArrayList<Integer> resultList = new ArrayList<>();
 
     /* Getter 메서드 구현 */
     public int getNum1() {
@@ -28,8 +27,8 @@ public class Calculator {
         return result;
     }
 
-    public ArrayList<Integer> getList(){
-        return list;
+    public ArrayList<Integer> getResultList(){
+        return resultList;
     }
 
     /* Setter 메서드 구현 */
@@ -53,9 +52,9 @@ public class Calculator {
         return result;
     }
 
-    public ArrayList<Integer> setList(){
-        this.list = list;
-        return list;
+    public ArrayList<Integer> setResultList(){
+        this.resultList = resultList;
+        return resultList;
     }
 
     /* 생성자 영역 */
@@ -66,12 +65,18 @@ public class Calculator {
         switch (operator) {
             case '+':
                 result = num1 + num2;
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             case '-':
                 result = num1 - num2;
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             case '*':
                 result = num1 * num2;
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             case '/':
                 if (num2 == 0) {
@@ -79,22 +84,19 @@ public class Calculator {
                     break;
                 }
                 result = num1 / num2;
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             default:
                 System.out.println("사칙연산자가 아닙니다. 다시 입력해주세요.");
                 break;
         }
 
-        System.out.println("결과: "+num1+operator+num2+"=" + result);
-        list.add(result);
-        System.out.println("list 추가 후"+list);
-        System.out.println(result);
-        /* return 연산 결과 */
+        System.out.println("resultList: "+resultList);
         return result;
     }
 
     public void removeResult() {
-        /* 구현 */
-        list.remove(0);
+        resultList.remove(0);
     }
 }
