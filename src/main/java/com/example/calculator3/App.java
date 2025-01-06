@@ -21,8 +21,7 @@ public class App {
 
             if(num1>=0 && num2>=0){
                 System.out.print("사칙연산 기호를 입력하세요:");
-//                char operator = sc.next().charAt(0);
-                String operator = sc.next();
+                char operator = sc.next().charAt(0);
 
                 cal.calculate(num1,num2,operator);
 

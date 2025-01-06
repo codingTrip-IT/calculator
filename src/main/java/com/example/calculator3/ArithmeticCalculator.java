@@ -9,7 +9,7 @@ public class ArithmeticCalculator{
     /* 필드 영역 */
     int num1;
     int num2;
-    String operator;
+    char operator;
     OperatorType plus = OperatorType.PLUS;
     OperatorType minus = OperatorType.MINUS;
     OperatorType multi = OperatorType.MULTIPLY;
@@ -27,9 +27,9 @@ public class ArithmeticCalculator{
         return num2;
     }
 
-//    public char getOperator() {
-//        return operator;
-//    }
+    public char getOperator() {
+        return operator;
+    }
 
     public int getResult() {
         return result;
@@ -50,10 +50,10 @@ public class ArithmeticCalculator{
         return num2;
     }
 
-//    public char setOperator(char operator) {
-//        this.operator = operator;
-//        return operator;
-//    }
+    public char setOperator(char operator) {
+        this.operator = operator;
+        return operator;
+    }
 
     public int setResult(int result) {
         this.result = result;
@@ -68,9 +68,9 @@ public class ArithmeticCalculator{
     /* 생성자 영역 */
 
     /* 메서드 영역 */
-    public int calculate(int num1, int num2, String operator) {
+    public int calculate(int num1, int num2, char operator) {
 
-        OperatorType op = OperatorType.findByVal(operator);
+        OperatorType op = OperatorType.findByVal(Character.toString(operator));
 
         switch (op) {
             case PLUS:
