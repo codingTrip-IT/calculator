@@ -6,39 +6,45 @@ public class App {
     public static void main(String[] args) {
 
         /* Calculator 인스턴스 생성 */
-        Calculator cal = new Calculator();
+        ArithmeticCalculator cal = new ArithmeticCalculator();
 
         Scanner sc = new Scanner(System.in);
         String exits;
+        String removeOk;
 
-            while(true){
-                System.out.print("첫 번째 숫자를 입력하세요:");
-                int num1 = sc.nextInt();
+        while(true){
+            System.out.print("첫 번째 숫자를 입력하세요:");
+            int num1 = sc.nextInt();
 
-                System.out.print("두 번째 숫자를 입력하세요:");
-                int num2 = sc.nextInt();
+            System.out.print("두 번째 숫자를 입력하세요:");
+            int num2 = sc.nextInt();
 
-                if(num1>=0 && num2>=0){
-                    System.out.print("사칙연산 기호를 입력하세요:");
-                    char operator = sc.next().charAt(0);
+            if(num1>=0 && num2>=0){
+                System.out.print("사칙연산 기호를 입력하세요:");
+//                char operator = sc.next().charAt(0);
+                String operator = sc.next();
 
-                    cal.calculate(num1,num2,operator);
+                cal.calculate(num1,num2,operator);
 
-                    /* 제어문을 활용하여 위 요구사항을 만족할 수 있게 구현합니다.*/
-                        System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-                        /* exit을 입력 받으면 반복 종료 */
-                        exits = sc.next();
-                        if(exits.equals("exit")){
-                            cal.removeResult();
-                            break;
-                        }
-                    } else {
-                        System.out.println("0이상 정수만 입력하세요.");
+                System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+                exits = sc.next();
+                if(exits.equals("exit")){
+                    System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? y/n");
+                    removeOk = sc.next();
+                    if(removeOk.equals("y")){
+                        cal.removeResult();
+                    }else if(removeOk.equals("n")){
+                        System.out.println("삭제하지 않고 종료합니다.");
+                    }else{
+                        System.out.println("삭제하지 않고 종료합니다.");
                     }
+                    break;
                 }
-
-        cal.getList();
-        System.out.println(cal.getList());
-
+            } else {
+                System.out.println("0이상 정수만 입력하세요.");
+            }
+        }
+        cal.getResultList();
+        System.out.println(cal.getResultList());
     }
 }
