@@ -10,12 +10,11 @@ public enum OperatorType {
 
     public String getValue(){return value;}
 
+    // 매개변수가 null이 아니고 enum의 값이 매개변수와 같으면 enum의 값을 리턴하라
     public static OperatorType findByVal(String val) {
-        for (OperatorType op : values()) {
-            if (val != null){
-                if (val.equals(op.value)) {
-                    return op;
-                }
+        for (OperatorType v : values()) {
+            if (val != null && val.equals(v.value)) {
+                    return v;
             }
         }
         return null;
