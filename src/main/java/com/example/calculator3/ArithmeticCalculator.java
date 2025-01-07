@@ -2,21 +2,14 @@ package com.example.calculator3;
 
 import java.util.*;
 
-import static com.example.calculator3.OperatorType.*;
-
-public class ArithmeticCalculator{
+public class ArithmeticCalculator<T extends Number>{
 
     /* 필드 영역 */
     int num1;
     int num2;
     char operator;
-    OperatorType plus = OperatorType.PLUS;
-    OperatorType minus = OperatorType.MINUS;
-    OperatorType multi = OperatorType.MULTIPLY;
-    OperatorType divide = OperatorType.DIVIDE;
-
-    int result = 0;
-    ArrayList<Integer> resultList = new ArrayList<>();
+    double result = 0.0;
+    private ArrayList<Double> resultList = new ArrayList<>();
 
     /* Getter 메서드 구현 */
     public int getNum1() {
@@ -31,11 +24,11 @@ public class ArithmeticCalculator{
         return operator;
     }
 
-    public int getResult() {
+    public double getResult() {
         return result;
     }
 
-    public ArrayList<Integer> getResultList(){
+    public ArrayList<Double> getResultList(){
         return resultList;
     }
 
@@ -55,12 +48,12 @@ public class ArithmeticCalculator{
         return operator;
     }
 
-    public int setResult(int result) {
+    public double setResult(double result) {
         this.result = result;
         return result;
     }
 
-    public ArrayList<Integer> setResultList(){
+    public ArrayList<Double> setResultList(){
         this.resultList = resultList;
         return resultList;
     }
@@ -68,33 +61,43 @@ public class ArithmeticCalculator{
     /* 생성자 영역 */
 
     /* 메서드 영역 */
-    public int calculate(int num1, int num2, char operator) {
-
+    public Double calculate(T num1, T num2, char operator) {
         OperatorType op = OperatorType.findByVal(Character.toString(operator));
 
         switch (op) {
             case PLUS:
-                result = num1 + num2;
+//                result = num1 + num2;
+                result =  num1.doubleValue() + num2.doubleValue();
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             case MINUS:
-                result = num1 - num2;
+//                result = num1 - num2;
+                result =  num1.doubleValue() - num2.doubleValue();
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             case MULTIPLY:
-                result = num1 * num2;
+//                result = num1 * num2;
+                result =  num1.doubleValue() * num2.doubleValue();
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
                 break;
             case DIVIDE:
-                if (num2 == 0) {
-                    System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                if (num2.doubleValue() == 0.0) {
+                    System.out.println("나눗셈 연산에서 분모(두번째 수)에 0이 입력될 수 없습니다.");
                     break;
                 }
 //                try {
-//                    result = a / b;
+//                    result = num1 / num2;
+                result =  num1.doubleValue() / num2.doubleValue();
+                System.out.println("결과: "+num1+operator+num2+"=" + result);
+                resultList.add(result);
 //                } catch (ArithmeticException e) {
 //                    System.err.println("0으로 나눌 수 없습니다." + e);
 //                    System.exit(0);
-//                    result = 0;
 //                }
-                result = num1 / num2;
+//                result = num1 / num2;
                 break;
             default:
                 System.out.println("잘못된 연산자입니다. 다시 입력해주세요.");

@@ -2,7 +2,7 @@ package com.example.calculator3;
 
 import java.util.*;
 
-public class App {
+public class App{
     public static void main(String[] args) {
 
         /* Calculator 인스턴스 생성 */
@@ -14,10 +14,10 @@ public class App {
 
         while(true){
             System.out.print("첫 번째 숫자를 입력하세요:");
-            int num1 = sc.nextInt();
+            double num1 = sc.nextDouble();
 
             System.out.print("두 번째 숫자를 입력하세요:");
-            int num2 = sc.nextInt();
+            double num2 = sc.nextDouble();
 
             if(num1>=0 && num2>=0){
                 System.out.print("사칙연산 기호를 입력하세요:");
