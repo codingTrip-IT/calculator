@@ -6,7 +6,7 @@ public enum OperatorType {
     //값을 저장할 필드(인스턴스 변수)를 추가
     private final String value;
     // 생성자를 추가
-    OperatorType(String value){this.value = value; }
+    private OperatorType(String value){this.value = value; }
 
     public String getValue(){return value;}
 

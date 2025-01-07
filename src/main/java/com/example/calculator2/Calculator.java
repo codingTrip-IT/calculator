@@ -65,33 +65,26 @@ public class Calculator {
         switch (operator) {
             case '+':
                 result = num1 + num2;
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
                 break;
             case '-':
                 result = num1 - num2;
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
                 break;
             case '*':
                 result = num1 * num2;
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
                 break;
             case '/':
-                if (num2 == 0) {
-                    System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-                    break;
-                }
+//                if (num2 == 0) {
+//                    System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+//                    break;
+//                }
                 result = num1 / num2;
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
                 break;
             default:
                 System.out.println("사칙연산자가 아닙니다. 다시 입력해주세요.");
                 break;
         }
-
+        System.out.println("결과: "+num1+operator+num2+"=" + result);
+        resultList.add(result);
         System.out.println("resultList: "+resultList);
         return result;
     }

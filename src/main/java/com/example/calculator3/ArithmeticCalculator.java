@@ -5,10 +5,10 @@ import java.util.*;
 public class ArithmeticCalculator<T extends Number>{
 
     /* 필드 영역 */
-    int num1;
-    int num2;
-    char operator;
-    double result = 0.0;
+    private int num1;
+    private int num2;
+    private char operator;
+    private double result = 0.0;
     private ArrayList<Double> resultList = new ArrayList<>();
 
     /* Getter 메서드 구현 */
@@ -67,32 +67,31 @@ public class ArithmeticCalculator<T extends Number>{
         switch (op) {
             case PLUS:
 //                result = num1 + num2;
-                result =  num1.doubleValue() + num2.doubleValue();
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
+                result = num1.doubleValue() + num2.doubleValue();
+//                if (num1 instanceof Integer && num2 instanceof Integer) {
+//                    result = num1.intValue() + num2.intValue();
+//                }
+//                if (num1 instanceof Double && num2 instanceof Double) {
+//                    result = num1.doubleValue() + num2.doubleValue();
+//                }
+
                 break;
             case MINUS:
 //                result = num1 - num2;
                 result =  num1.doubleValue() - num2.doubleValue();
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
                 break;
             case MULTIPLY:
 //                result = num1 * num2;
                 result =  num1.doubleValue() * num2.doubleValue();
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
                 break;
             case DIVIDE:
-                if (num2.doubleValue() == 0.0) {
-                    System.out.println("나눗셈 연산에서 분모(두번째 수)에 0이 입력될 수 없습니다.");
-                    break;
-                }
+//                if (num2.doubleValue() == 0.0) {
+//                    System.out.println("나눗셈 연산에서 분모(두번째 수)에 0이 입력될 수 없습니다.");
+//                    break;
+//                }
 //                try {
 //                    result = num1 / num2;
                 result =  num1.doubleValue() / num2.doubleValue();
-                System.out.println("결과: "+num1+operator+num2+"=" + result);
-                resultList.add(result);
 //                } catch (ArithmeticException e) {
 //                    System.err.println("0으로 나눌 수 없습니다." + e);
 //                    System.exit(0);
@@ -103,9 +102,8 @@ public class ArithmeticCalculator<T extends Number>{
                 System.out.println("잘못된 연산자입니다. 다시 입력해주세요.");
                 break;
         }
-
-        System.out.println("결과: "+num1+operator+num2+"=" + result);
         /* return 연산 결과 */
+        System.out.println("결과: "+num1+operator+num2+"=" + result);
         resultList.add(result);
         System.out.println("list"+resultList);
         System.out.println(result);
