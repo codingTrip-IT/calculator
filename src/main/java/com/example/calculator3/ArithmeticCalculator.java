@@ -89,13 +89,7 @@ public class ArithmeticCalculator<T extends Number>{
 //                    System.out.println("나눗셈 연산에서 분모(두번째 수)에 0이 입력될 수 없습니다.");
 //                    break;
 //                }
-//                try {
-//                    result = num1 / num2;
                 result =  num1.doubleValue() / num2.doubleValue();
-//                } catch (ArithmeticException e) {
-//                    System.err.println("0으로 나눌 수 없습니다." + e);
-//                    System.exit(0);
-//                }
 //                result = num1 / num2;
                 break;
             default:
