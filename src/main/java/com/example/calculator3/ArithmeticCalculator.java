@@ -5,15 +5,15 @@ import java.util.*;
 public class ArithmeticCalculator<T extends Number>{
 
     /* 필드 영역 */
-    private ArrayList<Double> resultList = new ArrayList<>();
+    private List<Double> resultList = new ArrayList<>();
 
     /* Getter 메서드 구현 */
-    public ArrayList<Double> getResultList(){
+    public List<Double> getResultList(){
         return resultList;
     }
 
     /* Setter 메서드 구현 */
-    public void setResultList(ArrayList<Double> resultList){
+    public void setResultList(List<Double> resultList){
         this.resultList = resultList;
     }
 
@@ -82,9 +82,9 @@ public class ArithmeticCalculator<T extends Number>{
         resultList.remove(0);
     }
 
-    //저장된 연산 결과들 중 Scanner로 입력받은 값보다 큰 결과값 들을 출력
-    //람다 & 스트림 활용
-    public void readResult(Double inputValue) {
+    // compareResult : 저장된 연산 결과들 중 Scanner로 입력받은 값보다 큰 결과값 들을 출력하는 메서드
+    // 람다 & 스트림 활용
+    public void compareResult(Double inputValue) {
         resultList.stream()
                   .filter(result -> inputValue < result)
                   .forEach(result -> System.out.println(inputValue + "보다 더 큰 숫자는 " + result));

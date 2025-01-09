@@ -83,7 +83,7 @@ public class App{
                         System.out.println("숫자를 입력하세요.");
                         //저장된 연산 결과들 중 Scanner로 입력받은 값보다 큰 결과값 들을 출력하기 위해 값을 받습니다.
                         double inputValue = sc.nextDouble();
-                        cal.readResult(inputValue);
+                        cal.compareResult(inputValue);
                         break;
                     // 숫자가 아닌 값을 입력하면 이에 대한 예외처리를 합니다.
                     } catch (InputMismatchException e) {

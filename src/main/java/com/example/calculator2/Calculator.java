@@ -4,15 +4,15 @@ import java.util.*;
 
 public class Calculator {
     /* 필드 영역 */
-    private ArrayList<Integer> resultList = new ArrayList<>();
+    private List<Integer> resultList = new ArrayList<>();
 
     /* Getter 메서드 구현 */
-    public ArrayList<Integer> getResultList(){
+    public List<Integer> getResultList(){
         return resultList;
     }
 
     /* Setter 메서드 구현 */
-    public void setResultList(ArrayList<Integer> resultList) {
+    public void setResultList(List<Integer> resultList) {
         this.resultList = resultList;
     }
 
