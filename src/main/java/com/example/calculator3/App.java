@@ -40,6 +40,7 @@ public class App{
             while (true) {
                 try {
                     System.out.println("사칙연산 기호를 입력하세요:");
+                    System.out.println("+ - * /");
                     char operator = sc.next().charAt(0);
 
                     if (operator == '/' && num2 == 0) {
