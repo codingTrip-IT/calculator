@@ -9,10 +9,13 @@ ___
    2. Lv2 (calculator2 패키지 참고)
    3. Lv3 (calculator3 패키지 참고)
 2. 한계점
+   1. 0으로 나누면 Infinity가 되는 원인 파악하기
+   2. 메서드 반환타입 제네릭을 사용해보기﻿
+   3. 람다&스트림 더 활용하기
 ___
 ### 1. 레벨별 과제 설명
-### &ensp;&ensp;&ensp;&ensp;i. Lv1 (calculator 패키지 참고)
-### &ensp;&ensp;&ensp;&ensp;&ensp;1. Lv1 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기
+### i. Lv1 (calculator 패키지 참고)
+### &ensp;1. Lv1 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기
 ### App 클래스
 ####  1) 계산기는 양의 정수(0 포함) 2개의 숫자를 받을 수 있고 사칙연산 기호를 받을 수 있다.
 - Scanner를 사용해서 입력값을 받아온다.
@@ -34,8 +37,8 @@ ___
 - <img width="350" alt="스크린샷 2025-01-09 오후 5 55 56" src="https://github.com/user-attachments/assets/2235b147-48aa-4099-8fdd-1906ec1a49f7" />
 
 </br></br>
-### &ensp;&ensp;&ensp;&ensp;ii. Lv2 (calculator2 패키지 참고)
-### &ensp;&ensp;&ensp;&ensp;&ensp;2. Lv2 클래스를 적용해 기본적인 연산을 수행할 수 있는 계산기 만들기
+### ii. Lv2 (calculator2 패키지 참고)
+### &ensp;2. Lv2 클래스를 적용해 기본적인 연산을 수행할 수 있는 계산기 만들기
 ### App 클래스
 ####  1) 양의 정수(0 포함) 2개의 숫자를 받을 수 있고 사칙연산 기호를 받을 수 있다.
 - Scanner를 사용해서 입력값을 받아온다.
@@ -58,6 +61,7 @@ ___
 ####  1) 사칙연산을 수행한다.
 - calculate : App 클래스에서 매개변수를 받아서 사칙연산을 계산하는 메서드
 #### 2) 계산된 결과 값들을 기록하는 컬렉션을 만든다.
+- ArrayList(컬렉션)인 resultList에 값을 저장한다.
 - addResult : 결과값을 리스트에 저장하는 메서드
 #### 3) 컬렉션의 가장 먼저 저장된 데이터를 삭제하는 기능을 만든다.
 - removeResult : 결과값을 저장한 리스트 중 가장 먼저 저장된 데이터를 삭제하는 메서드
@@ -71,8 +75,8 @@ ___
 - <img width="350" alt="스크린샷 2025-01-09 오후 5 55 34" src="https://github.com/user-attachments/assets/c79b055c-c66c-4fb2-a471-8386fb33da12" />
 
 </br></br>
-### &ensp;&ensp;&ensp;&ensp;iii. Lv3 (calculator3 패키지 참고)
-### &ensp;&ensp;&ensp;&ensp;&ensp;3. Lv3 Enum, 제네릭, 람다 & 스트림을 이해한 계산기 만들기
+### iii. Lv3 (calculator3 패키지 참고)
+### &ensp;3. Lv3 Enum, 제네릭, 람다 & 스트림을 이해한 계산기 만들기
 ### App 클래스
 ####  1) 2개의 숫자를 받을 수 있고 사칙연산 기호를 받을 수 있다.
 - Scanner를 사용해서 입력값을 받아온다.
@@ -101,6 +105,7 @@ ___
 - calculate : App 클래스에서 매개변수를 받아서 사칙연산을 계산하는 메서드
   - 제네릭을 활용해서 실수도 매개변수로 받을 수 있게 수정한다.
 #### 2) 계산된 결과 값들을 기록하는 컬렉션을 만든다.
+- ArrayList(컬렉션)인 resultList에 값을 저장한다.
 - addResult : 결과값을 리스트에 저장하는 메서드
 #### 3) 컬렉션의 가장 먼저 저장된 데이터를 삭제하는 기능을 만든다.
 - removeResult : 결과값을 저장한 리스트 중 가장 먼저 저장된 데이터를 삭제하는 메서드
@@ -120,12 +125,22 @@ ___
 - <img width="200" alt="스크린샷 2025-01-09 오후 5 54 41" src="https://github.com/user-attachments/assets/e40950c6-da09-459a-954f-d5ad026b5bf1" />
 - <img width="200" alt="스크린샷 2025-01-09 오후 5 55 11" src="https://github.com/user-attachments/assets/dc17ec6e-ef89-41d6-8c12-6fec3fca45b1" />
 ___
+
 ### 2. 한계점
-- 0으로 나누면 infinity﻿
+### i. 0으로 나누면 Infinity가 되는 원인 파악하기﻿
+ if문을 사용해서 0으로 나누지 못하도록 처리했으나,</br>
+사실은 try-catch문 ArithmeticException을 사용하고 싶었습니다.</br>
+그러나 0으로 나눌 경우, Exception이 아닌 Infinity로 받아져서 예외처리가 안되므로 if문으로 처리했습니다.
+
 -  <img width="200" alt="스크린샷 2025-01-09 오후 5 41 00" src="https://github.com/user-attachments/assets/7a712966-c124-4b2f-8e71-66f39bf9b9d6" />
-- 메소드 T로 받아주기﻿
+### ii. 메서드 반환타입 제네릭을 사용해보기﻿
+ calculator 메서드에서 반환타입을 제네릭으로 받고 싶었으나,</br>
+return result 부분에서 형변환을 하는 방법을 찾지 못해서 </br>
+double타입으로 두었습니다.
 -  <img width="518" alt="스크린샷 2025-01-09 오후 5 43 26" src="https://github.com/user-attachments/assets/18612356-2e4b-4e2a-91e9-2e7bf94247a2" />
-- 람다&스트림 좀 더 배우기
+### iii.람다&스트림 더 활용하기
+Scanner로 입력받은 값보다 결과값 리스트 값이 더 큰 경우 그 값을 출력하도록 구현했습니다.</br>
+추후 입력값이 결과값보다 작은 경우 작다는 메시지 출력을 스트림을 사용해서 구현하고 싶습니다. 
 - <img width="743" alt="스크린샷 2025-01-09 오후 5 44 01" src="https://github.com/user-attachments/assets/65c880b4-7c7f-4645-91c1-a87461b33094" />
 ___
 지금까지 읽어주셔서 감사합니다.
