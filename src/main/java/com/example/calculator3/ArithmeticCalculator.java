@@ -29,6 +29,7 @@ public class ArithmeticCalculator<T extends Number>{
     }
 
     public ArrayList<Double> getResultList(){
+        System.out.println(resultList);
         return resultList;
     }
 
@@ -62,20 +63,14 @@ public class ArithmeticCalculator<T extends Number>{
 
     /* 메서드 영역 */
     public Double calculate(T num1, T num2, char operator) {
-//        OperatorType op = OperatorType.findByVal(Character.toString(operator));
         OperatorType op = OperatorType.findByVal(operator);
-//        OperatorType op2 = OperatorType.valueOf(Character.toString(operator));
 
         switch (op) {
             case PLUS:
-//                result = num1 + num2;
                 result = num1.doubleValue() + num2.doubleValue();
-//                if (num1 instanceof Integer){
-//                    int inputNum1 = num1.intValue();
-//                } else if(num2 instanceof Integer){
-//                    int inputNum2 = num2.intValue();
-//                }
-//                if (num1 instanceof Double && num2 instanceof Double) {
+//                if (num1 instanceof Integer && num2 instanceof Integer){
+//                    result = num1.intValue() + num2.intValue();
+//                } else if (num1 instanceof Double && num2 instanceof Double) {
 //                    result = num1.doubleValue() + num2.doubleValue();
 //                }
 
