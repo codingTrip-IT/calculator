@@ -9,8 +9,6 @@ public class App {
         Calculator cal = new Calculator();
 
         Scanner sc = new Scanner(System.in);
-        String exits;
-        String removeOk;
 
             while(true){
                 System.out.print("첫 번째 숫자를 입력하세요:");
@@ -36,10 +34,10 @@ public class App {
                     }
 
                     System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-                    exits = sc.next();
+                    String exits = sc.next();
                     if(exits.equals("exit")){
                         System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? y/n");
-                        removeOk = sc.next();
+                        String removeOk = sc.next();
                         if(removeOk.equals("y")){
                             cal.removeResult();
                         }else if(removeOk.equals("n")){
