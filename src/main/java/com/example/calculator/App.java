@@ -21,6 +21,7 @@ public class App {
                     char operator= sc.next().charAt(0);
 
                     int result = 0;
+                    // 각 사칙연산 기호에 해당하는 계산을 수행합니다.
                     switch(operator){
                         case '+':
                             result = num1 + num2;
@@ -32,6 +33,7 @@ public class App {
                             result = num1 * num2;
                             break;
                         case '/':
+                            // 나눗셈 연산에서 0으로 나누지 못하도록 처리합니다.
                             if (num2 == 0) {
                                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
                                 break;
@@ -42,11 +44,10 @@ public class App {
                             System.out.println("잘못된 연산자입니다. 다시 입력해주세요.");
                             break;
                     }
-                    /* 제어문을 활용하여 위 요구사항을 만족할 수 있게 구현합니다.*/
                     System.out.println("결과: "+num1+operator+num2+"=" + result);
 
                     System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-                    /* exit을 입력 받으면 반복 종료 */
+                    // exit을 입력 받으면 반복을 종료합니다.
                     String exits = sc.next();
                     if(exits.equals("exit")){
                         break;
@@ -55,6 +56,5 @@ public class App {
                     System.out.println("0이상 정수만 입력하세요.");
                 }
             }
-
     }
 }
