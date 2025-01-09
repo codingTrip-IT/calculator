@@ -5,24 +5,24 @@ import java.util.*;
 public class ArithmeticCalculator<T extends Number>{
 
     /* 필드 영역 */
-    private int num1;
-    private int num2;
-    private char operator;
+//    private int num1;
+//    private int num2;
+//    private char operator;
     private double result = 0.0;
     private ArrayList<Double> resultList = new ArrayList<>();
 
     /* Getter 메서드 구현 */
-    public int getNum1() {
-        return num1;
-    }
-
-    public int getNum2() {
-        return num2;
-    }
-
-    public char getOperator() {
-        return operator;
-    }
+//    public int getNum1() {
+//        return num1;
+//    }
+//
+//    public int getNum2() {
+//        return num2;
+//    }
+//
+//    public char getOperator() {
+//        return operator;
+//    }
 
     public double getResult() {
         return result;
@@ -34,20 +34,20 @@ public class ArithmeticCalculator<T extends Number>{
     }
 
     /* Setter 메서드 구현 */
-    public int setNum1(int num1) {
-        this.num1 = num1;
-        return num1;
-    }
-
-    public int setNum2(int num2) {
-        this.num2 = num2;
-        return num2;
-    }
-
-    public char setOperator(char operator) {
-        this.operator = operator;
-        return operator;
-    }
+//    public int setNum1(int num1) {
+//        this.num1 = num1;
+//        return num1;
+//    }
+//
+//    public int setNum2(int num2) {
+//        this.num2 = num2;
+//        return num2;
+//    }
+//
+//    public char setOperator(char operator) {
+//        this.operator = operator;
+//        return operator;
+//    }
 
     public double setResult(double result) {
         this.result = result;
@@ -62,7 +62,7 @@ public class ArithmeticCalculator<T extends Number>{
     /* 생성자 영역 */
 
     /* 메서드 영역 */
-    public Double calculate(T num1, T num2, char operator) {
+    public double calculate(T num1, T num2, char operator) {
         OperatorType op = OperatorType.findByVal(operator);
 
         switch (op) {
@@ -97,14 +97,16 @@ public class ArithmeticCalculator<T extends Number>{
         }
         /* return 연산 결과 */
         System.out.println("결과: "+num1+operator+num2+"=" + result);
-        resultList.add(result);
-        System.out.println("list"+resultList);
-        System.out.println(result);
+        addResult();
         return result;
     }
 
+    public void addResult() {
+        resultList.add(result);
+        System.out.println("resultList: "+resultList);
+    }
+
     public void removeResult() {
-        /* 구현 */
         resultList.remove(0);
     }
 
