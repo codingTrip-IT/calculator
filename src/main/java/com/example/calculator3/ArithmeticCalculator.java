@@ -62,14 +62,18 @@ public class ArithmeticCalculator<T extends Number>{
 
     /* 메서드 영역 */
     public Double calculate(T num1, T num2, char operator) {
-        OperatorType op = OperatorType.findByVal(Character.toString(operator));
+//        OperatorType op = OperatorType.findByVal(Character.toString(operator));
+        OperatorType op = OperatorType.findByVal(operator);
+//        OperatorType op2 = OperatorType.valueOf(Character.toString(operator));
 
         switch (op) {
             case PLUS:
 //                result = num1 + num2;
                 result = num1.doubleValue() + num2.doubleValue();
-//                if (num1 instanceof Integer && num2 instanceof Integer) {
-//                    result = num1.intValue() + num2.intValue();
+//                if (num1 instanceof Integer){
+//                    int inputNum1 = num1.intValue();
+//                } else if(num2 instanceof Integer){
+//                    int inputNum2 = num2.intValue();
 //                }
 //                if (num1 instanceof Double && num2 instanceof Double) {
 //                    result = num1.doubleValue() + num2.doubleValue();
@@ -107,5 +111,20 @@ public class ArithmeticCalculator<T extends Number>{
     public void removeResult() {
         /* 구현 */
         resultList.remove(0);
+    }
+
+//    - [ ]  **저장된 연산 결과들 중 Scanner로 입력받은 값보다 큰 결과값 들을 출력**
+//            - [ ]  추가) 람다 & 스트림 학습을 위해 여러 가지 조회 조건들을 추가하여 구현 해보시면 학습에 많은 도움이 되실 수 있습니다.
+//    public void readResult(Double inputValue) {
+//        for(int i=0;i<resultList.size();i++){
+//            if(inputValue < resultList.get(i)){
+//                System.out.println(inputValue+"보다 더 큰 숫자는 "+resultList.get(i));
+//            };
+//        }
+//    }
+    public void readResult(Double inputValue) {
+        resultList.stream()
+                  .filter(result -> inputValue < result)
+                  .forEach(result -> System.out.println(inputValue + "보다 더 큰 숫자는 " + result));
     }
 }
