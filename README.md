@@ -16,6 +16,8 @@ ___
 3. 람다&스트림 더 활용하기
 
 ___ 
+<div>
+
 ****1. 레벨별 과제 설명****  
 **i. Lv1 (calculator 패키지 참고)**  
 **1. Lv1 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기**
@@ -35,14 +37,17 @@ ___
 - exit 입력 시 종료
 
 **실행 결과**</br>
-- **정상결과**</br>
-<img width="250" alt="스크린샷 2025-01-09 오후 5 46 57" src="https://github.com/user-attachments/assets/abd144af-46b4-4bf9-a42f-461ad3e074a2" />
-<img width="250" alt="스크린샷 2025-01-09 오후 5 47 03" src="https://github.com/user-attachments/assets/727c9f41-2054-4a26-9b28-ccd213b78343" />
-<img width="250" alt="스크린샷 2025-01-09 오후 5 47 34" src="https://github.com/user-attachments/assets/374420dd-cb4c-4f63-ab2c-5b0d0c1fecc3" />
-<img width="250" alt="스크린샷 2025-01-09 오후 5 46 57" src="https://github.com/user-attachments/assets/abd144af-46b4-4bf9-a42f-461ad3e074a2" />
-- **비정상결과**</br>
-<img width="300" alt="스크린샷 2025-01-09 오후 5 55 56" src="https://github.com/user-attachments/assets/2235b147-48aa-4099-8fdd-1906ec1a49f7" />  
-</br>
+- **정상결과**
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 46 57" src="https://github.com/user-attachments/assets/abd144af-46b4-4bf9-a42f-461ad3e074a2" />
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 47 03" src="https://github.com/user-attachments/assets/727c9f41-2054-4a26-9b28-ccd213b78343" />
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 47 34" src="https://github.com/user-attachments/assets/374420dd-cb4c-4f63-ab2c-5b0d0c1fecc3" />
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 46 57" src="https://github.com/user-attachments/assets/abd144af-46b4-4bf9-a42f-461ad3e074a2" />
+- **비정상결과**
+- <img width="300" alt="스크린샷 2025-01-09 오후 5 55 56" src="https://github.com/user-attachments/assets/2235b147-48aa-4099-8fdd-1906ec1a49f7" />
+</div>
+
+<div>
+
 **ii. Lv2 (calculator2 패키지 참고)**</br>
 **2. Lv2 클래스를 적용해 기본적인 연산을 수행할 수 있는 계산기 만들기**
 
@@ -81,13 +86,16 @@ ___
 - removeResult : 결과값을 저장한 리스트 중 가장 먼저 저장된 데이터를 삭제하는 메서드
 
 **실행 결과**</br>
-- **정상결과**</br>
-<img width="250" alt="스크린샷 2025-01-09 오후 5 49 47" src="https://github.com/user-attachments/assets/39baa7ef-206d-447d-8510-000a2a03333d" />
-<img width="250" alt="스크린샷 2025-01-09 오후 5 50 04" src="https://github.com/user-attachments/assets/b9dd5cfd-24e6-41b8-a0d8-0abe7243f61c" />
+- **정상결과**
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 49 47" src="https://github.com/user-attachments/assets/39baa7ef-206d-447d-8510-000a2a03333d" />
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 50 04" src="https://github.com/user-attachments/assets/b9dd5cfd-24e6-41b8-a0d8-0abe7243f61c" />
 
-- **비정상결과**</br>
-<img width="350" alt="스크린샷 2025-01-09 오후 5 55 34" src="https://github.com/user-attachments/assets/c79b055c-c66c-4fb2-a471-8386fb33da12" />  
-</br></br>
+- **비정상결과**
+- <img width="350" alt="스크린샷 2025-01-09 오후 5 55 34" src="https://github.com/user-attachments/assets/c79b055c-c66c-4fb2-a471-8386fb33da12" />  
+
+</div>
+<div>
+
 **iii. Lv3 (calculator3 패키지 참고)**</br>
 **3. Lv3 Enum, 제네릭, 람다 & 스트림을 이해한 계산기 만들기**
 
@@ -139,14 +147,18 @@ ___
 - enum의 값이 매개변수와 같으면 enum의 값을 리턴합니다.
 
 **실행 결과**</br>
-- **정상 결과**</br>
-<img width="250" alt="스크린샷 2025-01-09 오후 5 53 30" src="https://github.com/user-attachments/assets/8cb8f0a6-0876-4ecc-8fc3-4a448eb9c903" />
-<img width="400" alt="스크린샷 2025-01-09 오후 5 53 47" src="https://github.com/user-attachments/assets/da88d06c-cea3-4715-8c62-4c75702d2178" />
-<img width="400" alt="스크린샷 2025-01-09 오후 5 54 00" src="https://github.com/user-attachments/assets/af263ce8-d4f7-47ff-810b-95ec7053cb5b" />
-- **비정상 결과**</br>
-<img width="200" alt="스크린샷 2025-01-09 오후 5 54 41" src="https://github.com/user-attachments/assets/e40950c6-da09-459a-954f-d5ad026b5bf1" />
-<img width="400" alt="스크린샷 2025-01-09 오후 5 55 11" src="https://github.com/user-attachments/assets/dc17ec6e-ef89-41d6-8c12-6fec3fca45b1" />
- ___   
+- **정상 결과**
+- <img width="250" alt="스크린샷 2025-01-09 오후 5 53 30" src="https://github.com/user-attachments/assets/8cb8f0a6-0876-4ecc-8fc3-4a448eb9c903" />
+- <img width="400" alt="스크린샷 2025-01-09 오후 5 53 47" src="https://github.com/user-attachments/assets/da88d06c-cea3-4715-8c62-4c75702d2178" />
+- <img width="400" alt="스크린샷 2025-01-09 오후 5 54 00" src="https://github.com/user-attachments/assets/af263ce8-d4f7-47ff-810b-95ec7053cb5b" />
+- **비정상 결과**
+- <img width="200" alt="스크린샷 2025-01-09 오후 5 54 41" src="https://github.com/user-attachments/assets/e40950c6-da09-459a-954f-d5ad026b5bf1" />
+- <img width="400" alt="스크린샷 2025-01-09 오후 5 55 11" src="https://github.com/user-attachments/assets/dc17ec6e-ef89-41d6-8c12-6fec3fca45b1" />
+</div>
+
+___   
+<div>
+
 **2. 한계점**</br>
 **i. 0으로 나누면 Infinity가 되는 원인 파악하기**</br>
 if문을 사용해서 0으로 나누지 못하도록 처리했으나,    
@@ -166,7 +178,8 @@ Scanner로 입력받은 값보다 결과값 리스트 값이 더 큰 경우 그 
 추후 입력값이 결과값보다 작은 경우 작다는 메시지 출력을 스트림을 사용해서 구현하고 싶습니다. 
 
 <img width="743" alt="스크린샷 2025-01-09 오후 5 44 01" src="https://github.com/user-attachments/assets/65c880b4-7c7f-4645-91c1-a87461b33094" />
-___ 
+</div>
+
 지금까지 읽어주셔서 감사합니다.
 
 **contact :** https://codingtrip.tistory.com/
