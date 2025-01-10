@@ -138,20 +138,20 @@ ___
 
 **2. 한계점**  
 **i. 0으로 나누면 Infinity가 되는 원인 파악하기**﻿  
-if문을 사용해서 0으로 나누지 못하도록 처리했으나,</br>  
-사실은 try-catch문 ArithmeticException을 사용하고 싶었습니다.</br>  
+if문을 사용해서 0으로 나누지 못하도록 처리했으나,  
+사실은 try-catch문 ArithmeticException을 사용하고 싶었습니다.
 그러나 0으로 나눌 경우, Exception이 아닌 Infinity로 받아져서 예외처리가 안되므로 if문으로 처리했습니다.
 
 <img width="250" alt="스크린샷 2025-01-09 오후 5 41 00" src="https://github.com/user-attachments/assets/7a712966-c124-4b2f-8e71-66f39bf9b9d6" />  
 
 **ii. 메서드 반환타입 제네릭을 사용해보기**﻿  
-calculator 메서드에서 반환타입을 제네릭으로 받고 싶었으나,</br>  
-return result 부분에서 형변환을 하는 방법을 찾지 못해서 </br>  
+calculator 메서드에서 반환타입을 제네릭으로 받고 싶었으나,
+return result 부분에서 형변환을 하는 방법을 찾지 못해서 
 double타입으로 두었습니다.
 - <img width="518" alt="스크린샷 2025-01-09 오후 5 43 26" src="https://github.com/user-attachments/assets/18612356-2e4b-4e2a-91e9-2e7bf94247a2" />  
 -
 **iii.람다&스트림 더 활용하기**  
-Scanner로 입력받은 값보다 결과값 리스트 값이 더 큰 경우 그 값을 출력하도록 구현했습니다.</br>  
+Scanner로 입력받은 값보다 결과값 리스트 값이 더 큰 경우 그 값을 출력하도록 구현했습니다. 
 추후 입력값이 결과값보다 작은 경우 작다는 메시지 출력을 스트림을 사용해서 구현하고 싶습니다.
 - <img width="743" alt="스크린샷 2025-01-09 오후 5 44 01" src="https://github.com/user-attachments/assets/65c880b4-7c7f-4645-91c1-a87461b33094" />  
 ___  
